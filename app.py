@@ -85,7 +85,7 @@ def webhook():
 
     if incoming_msg in KEYWORD_RESPONSES:
         # Respond to patient
-        resp.message(f"✅ '{incoming_msg}' alert received. Your caregiver has been notified.")
+        resp.message(f"✅ '{incoming_msg}' message received. Sam has been notified.")
 
         # Notify caregiver via WhatsApp
         alert_msg = f"{KEYWORD_RESPONSES[incoming_msg]} ({sender})"
@@ -105,7 +105,7 @@ def webhook():
         log_alert(sender, incoming_msg)
 
     else:
-        resp.message("🤖 I didn't recognize that. Try 'Apex', 'emergency', 'sam', or 'distress'.")
+        resp.message("🤖 I didn't recognize that. Try 'apex', 'emergency', 'sam', or 'distress'.")
 
     return str(resp)
 
