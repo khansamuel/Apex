@@ -1,2 +1,3 @@
 .env
 alerts.db
+alertbot.log
